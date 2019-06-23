@@ -1,0 +1,460 @@
+/* -------------
+Reset style
+------------- */
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* -------------
+Default style
+------------- */
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f5f5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+    color: #4e4e4e;
+    margin: 0;
+    text-decoration: none;
+}
+
+a:hover,
+a:active,
+.activeLink {
+    color: #0076fb;
+    font-weight: 700;
+}
+
+h1,
+h2 {
+    color: #0076fb;
+    margin-bottom: 0.5em;
+}
+
+h4 {
+    font-size: 1.2rem;
+    margin: .2em 0;
+}
+
+ul {
+    list-style: none;
+}
+
+#container {
+    padding: 0 4em;
+    position: relative;
+    min-height: calc(100vh - 16em);
+}
+
+/* -------------
+Layout style
+------------- */
+
+/* Header */
+header {
+    top: 0;
+    left: 0;
+    height: 4em;
+    display: flex;
+    align-items: center;
+    background-color: #121212;
+    padding: 0 4em;
+    margin-bottom: 2em;
+}
+
+/* Logo */
+.logo {
+    color: #0076fb;
+    margin-bottom: 0;
+    letter-spacing: 5px;
+}
+
+.logo::after {
+    content: "PHP";
+    font-weight: 300;
+    font-size: 10px;
+    vertical-align: top;
+    letter-spacing: 1px;
+}
+
+/* Navigation */
+.menu {
+    position: absolute;
+    right: 0;
+    display: flex;
+    z-index: 999;
+    overflow: hidden;
+    left: auto;
+    top: 0;
+    padding-top: 20px;
+}
+
+/* hamburger menu */
+.hamburgermenu {
+    cursor: pointer;
+    width: 40px;
+    position: relative;
+    right: 4em;
+    top: 0;
+    z-index: 10;
+    height: 35px;
+}
+
+.hamburgermenu span {
+    display: block;
+    height: 3px;
+    width: 40px;
+    margin-bottom: 0.5em;
+    background-color: white;
+    transition: all ease-in 0.2s;
+}
+
+.hamburgermenu span:nth-child(1) {
+    width: 100%;
+}
+
+.hamburgermenu span:nth-child(2) {
+    width: 60%;
+}
+
+.hamburgermenu span:nth-child(3) {
+    width: 25%;
+}
+
+.hamburgermenu:hover span {
+    width: 40px;
+}
+
+.active span:nth-child(1) {
+    width: 100%;
+    transform: rotateZ(-45deg);
+    margin-top: 10px;
+    transform-origin: center;
+    background-color: #fff;
+}
+
+.active span:nth-child(2) {
+    width: 0%;
+}
+
+.active span:nth-child(3) {
+    width: 100%;
+    transform: rotateZ(45deg);
+    margin-top: -21.5px;
+    transform-origin: center;
+    background-color: #fff;
+    margin-left: 1px;
+}
+
+/* Slide menu */
+nav {
+    display: block;
+    position: relative;
+    opacity: 0;
+    transform: translateY(-200px);
+    padding: 0 6em;
+    width: auto;
+    transition: all ease-in 0.25s;
+    margin-top: 0px;
+}
+
+.expanded {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+nav ul {
+    list-style: none;
+    width: auto;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    padding-left: 2em;
+}
+
+nav ul li:last-child {
+    padding-bottom: 0;
+}
+
+nav ul li a {
+    color: #fff;
+}
+
+nav ul li a:hover,
+nav ul li a:active {
+    color: #0076fb;
+}
+
+/* Footer */
+footer {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    background: #121212;
+    padding: 2em 4em;
+    margin-top: 2em;
+    height: 4em;
+    text-align: center;
+}
+
+footer h1 {
+    font-size: 1.6rem;
+}
+
+footer p {
+    margin-top: 0.5em;
+    text-transform: uppercase;
+    font-size: .7rem;
+    letter-spacing: 4px;
+    color: white;
+}
+
+/* -------------
+Elements style
+------------- */
+
+/* Buttons */
+.btn {
+    cursor: pointer;
+    background-color: #0076fb;
+    border: none;
+    font-size: 0.8rem;
+    color: white;
+    padding: 1em 2em;
+    margin: 1em 0;
+    text-transform: uppercase;
+}
+
+.btn:hover,
+.btn:active {
+    background-color: #005ac0;
+    color: white;
+    font-weight: normal;
+}
+
+.btnExtraLink {
+    color: black;
+    font-weight: normal;
+    text-decoration: underline;
+    font-size: 1em;
+}
+
+.btnExtraLink:hover,
+.btnExtraLink:active {
+    font-weight: normal;
+}
+
+/* -------------
+Modules style
+------------- */
+
+/* Form */
+#formtext {
+    background-color: #fbfbfb;
+    padding: 1em 2em;
+    margin: 0;
+    border: 1px solid #dedede;
+    border-radius: 0.2em;
+    font-family: Arial, Helvetica, sans-serif;
+    width: calc(100% - 4em);
+    font-size: 0.8rem;
+}
+
+#formarea {
+    background-color: #fbfbfb;
+    padding: 1em 2em;
+    margin: 0;
+    margin-bottom: 0.5em;
+    border: 1px solid #dedede;
+    border-radius: 0.2em;
+    font-family: Arial, Helvetica, sans-serif;
+    width: calc(100% - 4em);
+    font-size: 0.8rem;
+}
+
+.honeypot {
+    display: none;
+}
+
+/* Recensies / Posts */
+.postWrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+}
+
+.recensies {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-gap: 4em;
+    grid-template-areas: "postsform recensies";
+}
+
+.postsForm {
+    grid-area: postsform;
+}
+
+.postsForm strong {
+    color: #0076fb;
+}
+
+.posts {
+    grid-area: recensies;
+}
+
+.post {
+    background-color: #fbfbfb;
+    padding: 1em 2em;
+    margin: 0;
+    border: 1px solid #dedede;
+    border-radius: 0.2em;
+}
+
+.post__title {
+    margin: 0;
+    text-transform: capitalize;
+}
+
+.post__time {
+    font-size: 0.7rem;
+    margin-bottom: 1em;
+    color: #0076fb;
+}
+
+/* -------------
+Pages style
+------------- */
+
+/* Hero image */
+.hero {
+    max-width: 100vw;
+    background:
+        linear-gradient(rgba(255, 255, 255, .5),
+            rgba(255, 255, 255, .5)), url("https://images.unsplash.com/photo-1534761048360-953ec4f86aba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60");
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    height: calc(100vh - 12em);
+    margin: -2em 0;
+}
+
+.frontTitle {
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.frontTitle h1,
+.frontTitle p {
+    width: 40%;
+    color: black;
+}
+
+.frontTitle h1 {
+    text-transform: uppercase;
+    margin-bottom: 0.5em;
+    color: #0076fb;
+    font-weight: 900;
+    font-size: 2rem;
+}
+
+.frontTitle ul {
+    width: 40%;
+    color: black;
+}
+
+.frontTitle ul li {
+    margin-bottom: 0.5em;
+}
+
+.frontTitle ul li::before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-right: 1em;
+    background-color: #0076fb;
+}
+
+.pagination {
+    margin-bottom: 1em;
+}
+
+/* -------------
+Different screen sizes
+------------- */
+
+/* Mobile screens */
+@media screen and (max-width: 725px) {
+    html {
+        font-size: 14px;
+    }
+
+    nav ul {
+        list-style: none;
+        padding: 2em;
+        background-color: #121212;
+    }
+
+    nav ul li {
+        display: block;
+        padding-left: 0;
+        padding-bottom: 1em;
+        background-color: #121212;
+    }
+
+    .postWrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 1em;
+    }
+
+    .recensies {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 4em;
+        grid-template-areas: "postsform""recensies";
+    }
+
+    .frontTitle h1,
+    .frontTitle p,
+    .frontTitle ul {
+        width: 80%;
+    }
+}
+
+/* Large screens */
+
+@media screen and (min-width: 1920px) {
+    html {
+        font-size: 18px;
+    }
+}
