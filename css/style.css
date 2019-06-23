@@ -58,6 +58,11 @@ ul {
     min-height: calc(100vh - 16em);
 }
 
+abbr {
+    text-decoration: none;
+    
+}
+
 /* -------------
 Layout style
 ------------- */
