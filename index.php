@@ -3,8 +3,8 @@
 <div class="hero">
     <div class="frontTitle">
         <h1>DEMO WEBSITE</h1>
-        <p>Deze website bevat een recensie-pagina met recensies en een werkzaam formulier, die gelinkt staat aan een database. <br /><br />
-        <strong>Extra's zijn o.a.: </strong>
+        <p>Deze website bevat een recensie pagina met recensies en een werkzaam formulier dat gelinkt staat aan een database. <br /><br />
+        <strong>Extra functionaliteiten: </strong>
             <ul>
                 <li>Paginanummering in de recensies <strong>(PHP)</strong></li>
                 <li>Honeypot in het formulier <strong>(PHP)</strong></li>

@@ -352,23 +352,18 @@ Pages style
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-
     height: calc(100vh - 12em);
     margin: -2em 0;
 }
 
 .frontTitle {
     display: flex;
+    flex-direction: column;
     color: white;
     justify-content: center;
     align-items: center;
     height: 100%;
     width: 100%;
-    flex-direction: column;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     z-index: 2;
 }
 
