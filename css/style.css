@@ -328,6 +328,7 @@ Modules style
     margin: 0;
     border: 1px solid #dedede;
     border-radius: 0.2em;
+    word-wrap: anywhere;
 }
 
 .post__title {
